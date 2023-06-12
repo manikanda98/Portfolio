@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    width: 100vw;
+    height: 100vh;
+    background: url(card/bg2.jpeg);
+    background-position: center;
+    background-size: cover;
+
+}
+ .container { 
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+}
+
+.card{
+    display: grid;
+    grid-template-rows: repeat(10, 6fr);
+    flex-wrap: wrap;
+    position:relative;
+    /* border: 2px solid rgb(255, 255, 255); */
+    height: 350px;
+    width: 600px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
+}
+.card .card-header{
+    text-align: center;
+    color: rgb(13, 0, 255);
+}
+.describe{
+      position: relative;
+      text-align:justify;
+      color: #ffffff;
+      margin: 20px;
+      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: justify;
+}
+.pic{
+    position:absolute;
+    top: -50px;
+    left: 30px;
+    border-radius: 50%;
+    /* border: 1px solid white; */
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    background-image: url(assets/images/Manikanda.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.content{
+    margin: 10px;
+    position: relative;
+    color: azure;
+    display: grid;
+    grid-template-columns: repeat(2,112fr);
+
+}
+.content label{
+    font-weight: bold;
+    color: rgb(0, 255, 255);
+}
+.content p{
+    margin:10px 0px 10px 10px;
+
+}
+.skills{
+    position: relative;
+    padding-left:50px;
+}
+.skills li{
+    margin: 9px;
+}
+nav {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    display: flex;
+     flex-direction: column;
+     place-items: center;
+     justify-content: center;
+}
+
+.bar{
+     right: 0;
+    height: 3px;
+    width: 40px;
+    background-color: aqua;
+    margin: 2px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.container .resume{
+
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.resume a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+   
+    color: aqua;
+}
+.link
+{   padding: 10px;
+    height: 50px;
+    width: 100px; 
+    border: 2px solid white;
+    text-align: center;
+    position: absolute;
+    margin: 30%;   
+}
+.certificates{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.certificates img{
+    margin: 10px;
+}
+.certificates img::before{
+     content: 'hello ';
+     position: absolute;
+     left: 0;
+     color:wheat;
+     z-index: 10;
+     height: 100px;
+     width: 100px;
+     top:0;
+}
+.header{
+    margin-bottom: 10%;
+}
+@media (max-width:700px) {
+    body{
+
+        width: 100%;
+        height: 100vh;
+        background: url(card/bg2.jpeg);
+        background-position: center;
+        background-size: cover;
+    
+    }
+     .container { 
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+    }
+    .pic{
+        margin: -20px;
+        left: 15%;
+    }
+    .card{
+        display: grid;
+        grid-template-rows: repeat(1, 2fr);
+        flex-wrap:nowrap;
+        position:relative;
+        /* border: 2px solid rgb(255, 255, 255); */
+        height: 350px;
+        width: 400px;
+        box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
+    }
+    .certificates{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .certificates img{
+        height: 400px;
+        width: 400px;
+        margin:10px;
+    }
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+   
+}
