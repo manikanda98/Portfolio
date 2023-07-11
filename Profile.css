@@ -5,6 +5,7 @@
     font-family: 'poppins',sans-serif;
 }
 .container{
+     display: none;
       overflow:hidden;
       width:100vw;
       height:100vh;
