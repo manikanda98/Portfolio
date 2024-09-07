@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    display: flex;
+     height: 100vh;
+}
+.transition{
+    display: flex;
+    height: 100px;
+    width: 200px;
+    /* background-color: grey; */
+    border-radius: 50px;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+   
+}
+.transition .dot{
+    height: 20px;
+    width: 20px;
+    background-color: var(--color);
+    border-radius: 50%;
+    margin: 10px;
+    transition: 1s;  
+    animation: dot 1s var(--delay) infinite alternate ease-in-out;
+}
+
+@keyframes dot {
+      0% , 44%{
+       transform: translateX(50px);
+       background-color:var(--c1) ;
+      }
+      28%{
+        opacity: 0.4;
+        transform: translateX(-50px);
+      }
+      44%{
+        opacity:0.2;
+      }
+
+}

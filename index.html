@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Profile.css">
+    <script src="https://kit.fontawesome.com/71ecbdb03f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dot.css">
+</head>
+<body>
+    <div class="container">
+     <nav>
+        <div class="logo"><img src="Images/nlogo-no-background.png" alt="" width="90px"></div>
+        <div class="logo-shadow"></div>
+     <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+             <li><a href="project/New.html">Profile</a></li>
+             <li><a href="project/project.html">Projects</a></li>
+        </ul>
+       
+        <div class="Sbar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>      
+     </nav>
+     <div class="snav">
+        <div class="menu">
+        <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="About.html">About</a></li>
+             <li><a href="card/profile.html">Profile</a></li>
+             <li><a href="project/project.html">Projects</a></li>
+        </ul>
+    </div>
+     </div>
+     
+   <div class="text-box">
+    <p>I'M</p>
+    <h1>Manikandan</h1>
+    <h3>I HELP COMPANIES MAKE BEAUTIFUL WEBSITE </H3>
+        <div class="row">
+            <a href="">Explore my Portfolio </a>
+            <a href="">Connect with me <span>&#x2192;</span></a>
+            <span>You Can Explore More About My PortFolio and <br> Personal Life Experiences Here.</span>
+         </div>
+         
+   </div>
+   <div class="social-icons">
+     <a href=""><i class="fa-brands fa-square-facebook"></i></a>  
+    <a href="https://www.linkedin.com/in/manikandan-p-a7b635221"><i class="fa-brands fa-linkedin"></i></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+   </div>
+    </div>
+   
+        <script>
+        const btn=document.getElementsByClassName('Sbar')[0];
+        const nav=document.getElementsByClassName('snav')[0];
+        btn.addEventListener('click',()=>{
+        nav.classList.toggle('active');
+});
+         </script>
+    
+
+    <div class="transition">
+        <div class="dot" style="--delay:200ms; --color:red; --c1:blue;"></div>
+        <div class="dot" style="--delay:300ms; --color:rgb(251, 255, 0); --c1:rgb(0, 221, 255);"></div>
+        <div class="dot" style="--delay:400ms; --color:rgb(0, 255, 34); --c1:rgb(255, 0, 225);"></div>
+        <!-- <div class="dot" style="--delay:200ms; --color:red; --c1:blue;">i</div> -->
+     </div>
+     <script>
+          function show(){
+              document.getElementsByClassName("container")[0].style.display="block";
+          }
+          function hide(){
+              document.getElementsByClassName("transition")[0].style.display="none" 
+          }
+          setInterval(()=>{
+            hide();
+            show();
+          } ,1000);
+     </script>
+</body>
+</html>
