@@ -106,11 +106,7 @@ nav ul li :hover::before{
     font-weight: 400;
     color:transparent;
     -webkit-text-stroke: 1px white;
-<<<<<<< HEAD
     background: url("Images/abstract-background-with-low-poly-design.jpg");
-=======
-    background: url("Images/back.png");
->>>>>>> d6347e9ac19afaa30b4e932c51a1111479cb17df
     -webkit-background-clip: text;
     background-clip: text;
     background-position: 0 0;

@@ -5,7 +5,7 @@
 }
 body{
     background-color: #222;
-    background: url(/Images/bg2.jpeg);
+    background: url(Images/bg2.jpeg);
     background-position: center;
     background-size: cover;
     /* object-fit: cover; */
