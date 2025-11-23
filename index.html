@@ -1,88 +1,337 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="Profile.css">
-    <script src="https://kit.fontawesome.com/71ecbdb03f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="dot.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manikandan • ML Engineer & Backend Developer</title>
+  <meta name="description" content="ML Engineer & Java Backend Developer with experience in sensor virtualization, Generative AI, Spring Boot, Kafka, Redis, REST APIs, and backend system design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External libs: lottie, particles, github-calendar -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-calendar/dist/github-calendar-responsive.css" />
+  <script src="https://cdn.jsdelivr.net/npm/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-     <nav>
-        <div class="logo"><img src="Images/nlogo-no-background.png" alt="" width="90px"></div>
-        <div class="logo-shadow"></div>
-     <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-             <li><a href="project/New.html">Profile</a></li>
-             <li><a href="project/project.html">Projects</a></li>
-        </ul>
-       
-        <div class="Sbar">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>      
-     </nav>
-     <div class="snav">
-        <div class="menu">
-        <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="About.html">About</a></li>
-             <li><a href="card/profile.html">Profile</a></li>
-             <li><a href="project/project.html">Projects</a></li>
-        </ul>
-    </div>
-     </div>
-     
-   <div class="text-box">
-    <p>I'M</p>
-    <h1>Manikandan</h1>
-    <h3>I HELP COMPANIES MAKE BEAUTIFUL WEBSITE </H3>
-        <div class="row">
-            <a href="">Explore my Portfolio </a>
-            <a href="">Connect with me <span>&#x2192;</span></a>
-            <span>You Can Explore More About My PortFolio and <br> Personal Life Experiences Here.</span>
-         </div>
-         
-   </div>
-   <div class="social-icons">
-     <a href=""><i class="fa-brands fa-square-facebook"></i></a>  
-    <a href="https://www.linkedin.com/in/manikandan-p-a7b635221"><i class="fa-brands fa-linkedin"></i></i></a>
-    <a href=""><i class="fa-brands fa-instagram"></i></a>
-   </div>
-    </div>
-   
-        <script>
-        const btn=document.getElementsByClassName('Sbar')[0];
-        const nav=document.getElementsByClassName('snav')[0];
-        btn.addEventListener('click',()=>{
-        nav.classList.toggle('active');
-});
-         </script>
-    
+  <!-- Particles background -->
+  <div id="tsparticles"></div>
 
-    <div class="transition">
-        <div class="dot" style="--delay:200ms; --color:red; --c1:blue;"></div>
-        <div class="dot" style="--delay:300ms; --color:rgb(251, 255, 0); --c1:rgb(0, 221, 255);"></div>
-        <div class="dot" style="--delay:400ms; --color:rgb(0, 255, 34); --c1:rgb(255, 0, 225);"></div>
-        <!-- <div class="dot" style="--delay:200ms; --color:red; --c1:blue;">i</div> -->
-     </div>
-     <script>
-          function show(){
-              document.getElementsByClassName("container")[0].style.display="block";
-          }
-          function hide(){
-              document.getElementsByClassName("transition")[0].style.display="none" 
-          }
-          setInterval(()=>{
-            hide();
-            show();
-          } ,1000);
-     </script>
+  <header class="navbar container">
+    <div class="logo">Manikandan</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <a href="assets/certificate/resume.pdf" class="btn" style="margin-left:12px">Download Resume</a>
+    </div>
+  </header>
+  <div class="spacer"></div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h3 class="subtitle">ML Engineer & Backend Developer</h3>
+      <h1 class="title typing">Building Intelligent, Scalable Systems</h1>
+      <p class="desc">
+        I build intelligent backend systems combining Machine Learning and Java & Spring Boot — focusing on sensor virtualization, Generative AI–based synthetic data generation, API design, event-driven systems with Kafka, caching strategies with Redis, and performance optimization.
+      </p>
+
+      <!-- Hero orbit -->
+      <div class="hero-orbit" style="position:relative;width:320px;height:320px;margin:0 auto;">
+        <!-- Center icon -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+             style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:90px;opacity:0.95;filter:drop-shadow(0 2px 5px rgba(0,0,0,0.3));" />
+
+        <!-- Orbiting Icons -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="orbit-item orbit-1">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="orbit-item orbit-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" class="orbit-item orbit-3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="orbit-item orbit-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="orbit-item orbit-5">
+      </div>
+
+      <!-- Visme fallback -->
+      <div class="hero-visme" id="vismeBlock" style="display:none">
+        <script src="https://static-bundles.visme.co/visme-embed.js"></script>
+        <div class="visme_d" data-title="Hero Animation" data-url="koerwn4k-law-firms-linkedin-sponsored-ad" data-w="1200" data-full-h="true" data-h="600" data-domain="my"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="card tilt glow slide-up">
+        <p><strong>ML Engineer & Java Backend Developer</strong> with experience in designing and developing scalable backend systems using Java, Spring Boot, REST APIs, Microservices, and MySQL.</p>
+        <p>Currently working on <strong>sensor virtualization using ML and Generative AI</strong>, where I build models to simulate and predict sensor behavior under different climatic and operational conditions.</p>
+        <p>Hands-on experience with <strong>Kafka</strong> for event-driven pipelines, WebSocket-based live updates, and <strong>Redis caching</strong> to significantly improve API response time and scalability.</p>
+        <p>Strong understanding of SDLC, Agile, Git, Jira, and backend performance optimization for real-time and data-driven applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="card tilt glow slide-up" style="padding:25px;">
+
+        <!-- Backend Development -->
+        <h3 style="margin-bottom:10px;">Backend Development</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">☕ Java</span>
+          <span class="chip">📘 J2EE</span>
+          <span class="chip">🧱 OOP</span>
+          <span class="chip">🔗 Collections</span>
+          <span class="chip">⚙️ Multithreading</span>
+        </div>
+
+        <!-- Frameworks -->
+        <h3 style="margin-bottom:10px;">Frameworks</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">⚡ Spring Boot</span>
+          <span class="chip">🧩 Spring MVC</span>
+          <span class="chip">🛰️ Microservices</span>
+          <span class="chip">🛠️ Spring JPA</span>
+          <span class="chip">📚 Hibernate ORM</span>
+        </div>
+
+        <!-- API & Architecture -->
+        <h3 style="margin-bottom:10px;">API & Architecture</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">🌐 REST API Design</span>
+          <span class="chip">🏗️ Clean Architecture</span>
+          <span class="chip">🔄 DTO / Entity Mapping</span>
+        </div>
+
+        <!-- Messaging & Realtime -->
+        <h3 style="margin-bottom:10px;">Messaging & Realtime</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">📡 Kafka</span>
+          <span class="chip">💬 WebSocket</span>
+        </div>
+
+        <!-- Database -->
+        <h3 style="margin-bottom:10px;">Database</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">🗄️ MySQL</span>
+          <span class="chip">📊 Query Optimization</span>
+          <span class="chip">🧩 Schema Design</span>
+        </div>
+
+        <!-- Performance -->
+        <h3 style="margin-bottom:10px;">Performance</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">⚡ Redis Caching</span>
+          <span class="chip">🚀 API Optimization</span>
+          <span class="chip">📈 Load Handling</span>
+        </div>
+
+        <!-- DevOps & Tools -->
+        <h3 style="margin-bottom:10px;">DevOps & Tools</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">🛠️ Maven</span>
+          <span class="chip">🐙 Git / GitHub</span>
+          <span class="chip">📦 Jira</span>
+        </div>
+
+        <!-- AI / Machine Learning -->
+        <h3 style="margin-bottom:10px;">AI / Machine Learning</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <span class="chip">🤖 Machine Learning</span>
+          <span class="chip">🧠 Generative AI</span>
+          <span class="chip">📐 Feature Engineering</span>
+          <span class="chip">📊 Model Training & Evaluation</span>
+          <span class="chip">🌡️ Sensor Virtualization</span>
+          <span class="chip">📈 Predictive Modeling</span>
+        </div>
+
+        <!-- Process & Methodologies -->
+        <h3 style="margin-bottom:10px;">Process & Methodologies</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <span class="chip">📅 Agile Scrum</span>
+          <span class="chip">🗂️ SDLC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="card tilt glow slide-up" style="padding:25px; line-height:1.7;">
+        <h3 style="margin:0 0 6px 0;">Engineer — TATA ELXSI LTD, Chennai</h3>
+        <p style="margin:0 0 12px 0; color:var(--muted);">Dec 2024 — Present</p>
+        <p><strong>Key Responsibilities:</strong></p>
+        <ul style="margin:0; padding-left:18px;">
+          <li><strong>Developed</strong> ML models for sensor data prediction and virtualization under varying climatic and operational conditions.</li>
+          <li><strong>Generated</strong> unseen and synthetic sensor datasets using <strong>Generative AI</strong> to improve model robustness and coverage of edge cases.</li>
+          <li><strong>Performed</strong> data preprocessing, feature engineering, and model evaluation using metrics like RMSE and MAE.</li>
+          <li><strong>Designed and developed</strong> scalable backend services using <strong>Java, Spring Boot, REST APIs</strong>, ensuring modular and maintainable architecture.</li>
+          <li><strong>Optimized</strong> API performance using <strong>Redis caching</strong> and <strong>Kafka</strong>-based event-driven workflows for real-time updates.</li>
+          <li><strong>Implemented</strong> inter-service communication with <strong>Spring WebClient</strong> for non-blocking I/O and improved throughput.</li>
+          <li><strong>Collaborated</strong> in Agile Scrum teams using <strong>Jira</strong> for sprint planning, task tracking, and defect management.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <div class="card tilt glow slide-up">
+          <h3>AI/ML Sensor Virtualization System</h3>
+          <p>Developed a system that produces virtual automotive sensor outputs (e.g., MAF, temperature, pressure) using ML models and Generative AI for different climatic and load conditions.</p>
+          <p><strong>Roles:</strong></p>
+          <ul style="padding-left:18px; margin:0 0 10px 0;">
+            <li>Implemented ML pipelines for predictive and synthetic sensor data generation.</li>
+            <li>Performed data validation, feature engineering, and model performance analysis.</li>
+            <li>Collaborated on integrating ML outputs into backend APIs.</li>
+          </ul>
+          <p><strong>Tech:</strong> Python, ML Models, Generative AI, Feature Engineering</p>
+        </div>
+
+        <div class="card tilt glow slide-up">
+          <h3>Battery Health Monitoring Backend</h3>
+          <p>Backend service that ingests battery telemetry data, detects anomalies, and publishes alerts using a scalable Kafka pipeline.</p>
+          <p><strong>Roles:</strong></p>
+          <ul style="padding-left:18px; margin:0 0 10px 0;">
+            <li>Designed and developed RESTful APIs using Spring Boot & Spring MVC.</li>
+            <li>Built Kafka producers/consumers for real-time event processing.</li>
+            <li>Used Redis caching to reduce DB load and optimize performance.</li>
+            <li>Implemented inter-service communication using WebClient.</li>
+          </ul>
+          <p><strong>Tech:</strong> Spring Boot, Spring MVC, Kafka, Redis, WebClient, MySQL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="grid">
+        <div class="card tilt glow slide-up">
+          <p>📧 <a href="mailto:prasadpmanikandan@gmail.com">prasadpmanikandan@gmail.com</a></p>
+          <p>📞 +91 97903 24050</p>
+          <p>🔗 <a href="https://www.linkedin.com/in/manikandan-p-a7b635221/" target="_blank">LinkedIn</a> · <a href="https://github.com/manikanda98" target="_blank">GitHub</a></p>
+        </div>
+        <div class="card tilt glow slide-up">
+          <form onsubmit="event.preventDefault();alert('Thanks — I will respond shortly.')">
+            <input type="text" placeholder="Your name" required style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
+            <input type="email" placeholder="Your email" required style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
+            <textarea rows="5" placeholder="Message" style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd"></textarea>
+            <button class="btn primary-btn" style="padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;border:0">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:18px 0;text-align:center;color:var(--muted)">© 2025 Manikandan • ML Engineer & Backend Developer</footer>
+
+  <script>
+    // Initialize particles (subtle background)
+    tsParticles.load('tsparticles', {
+      fpsLimit:60,
+      background:{color:{value:"transparent"}},
+      particles:{
+        number:{value:40,density:{enable:true,area:800}},
+        color:{value:["#007bff","#2aa7ff"]},
+        shape:{type:'circle'},
+        opacity:{value:0.08},
+        size:{value:{min:1,max:4}},
+        move:{enable:true,speed:0.8,direction:'none',straight:false,outModes:{default:'out'}}
+      }
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    if(localStorage.getItem('theme')==='dark') document.documentElement.setAttribute('data-theme','dark');
+    function updateIcon(){themeToggle.textContent = document.documentElement.getAttribute('data-theme')==='dark' ? '☀️' : '🌙'}
+    updateIcon();
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = document.documentElement.getAttribute('data-theme')==='dark';
+      if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.removeItem('theme')}
+      else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark')}
+      updateIcon();
+    });
+
+    // Skill bars animate on load
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.bar>span').forEach(s=>{
+        s.style.width = s.getAttribute('data-width')||'0%';
+      });
+      // GitHub calendar (needs username)
+      try{GitHubCalendar('#github-calendar', 'manikanda98',{responsive:true})}catch(e){console.warn('GitHub calendar failed', e)}
+    });
+
+    // Optionally show Visme block if lottie fails to load in future
+    setTimeout(()=>{
+      const lottie = document.querySelector('lottie-player');
+      if(!lottie || lottie.getBoundingClientRect().height===0){document.getElementById('vismeBlock').style.display='hidden'}
+    },2000);
+  </script>
+  <script>
+    // Reveal cards on scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('reveal'); }
+      });
+    }, {threshold:0.2});
+
+    document.querySelectorAll('.card').forEach(card=>observer.observe(card));
+  </script>
+  <script>
+    // Scroll reveal
+    const revealObserver=new IntersectionObserver((e)=>{
+      e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show')}})
+    },{threshold:0.2});
+    document.querySelectorAll('.slide-left,.slide-right,.slide-up,.zoom-in').forEach(el=>revealObserver.observe(el));
+
+    // 3D tilt effect
+    const tiltCards=document.querySelectorAll('.tilt');
+    tiltCards.forEach(card=>{
+      card.addEventListener('mousemove',e=>{
+        const r=card.getBoundingClientRect();
+        const x=e.clientX-r.left;
+        const y=e.clientY-r.top;
+        const rotateX=((y-r.height/2)/20);
+        const rotateY=((x-r.width/2)/20*-1);
+        card.style.transform=`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      card.addEventListener('mouseleave',()=>{
+        card.style.transform='rotateX(0) rotateY(0)';
+      })
+    });
+  </script>
+
+  <!-- TECH STACK FLOATING SIDEBAR -->
+  <div class="tech-sidebar">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-icon">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="tech-icon">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" class="tech-icon">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" class="tech-icon">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" class="tech-icon">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-icon">
+  </div>
+
 </body>
 </html>

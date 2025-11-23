@@ -13,13 +13,11 @@ body{
    background-size: cover;
    background-position: center;
    overflow: hidden;
-
-   
 }
 .container{
     height: 100%;
     width: 100%;
-    /* border: 1px solid gray; */
+  /* border: 1px solid gray; */
     /* background-color: aqua; */
     display: flex;
     /* align-items: center; */
@@ -104,7 +102,6 @@ body{
     /* align-items: center;
     justify-content: center; */
     flex-direction: column;
-    
     color: rgb(0, 0, 0);
     font-size: 0%; 
 }
@@ -134,9 +131,9 @@ body{
           scrollbar-width: none;
           scroll-behavior: smooth;
           box-shadow: 1px 2px 3px rgb(255, 149, 0);  
-          border-radius:0px 50px 3px 50px; 
-          margin:0px 10px 0 0 ;
-          transform:skewX(-20deg);
+          /* border-radius:0px 50px 3px 50px;  */
+          margin:0px 10px 0 10px ;
+          /* transform:skewX(-20deg); */
    
 }
 .cen.active ~ .Education svg{
@@ -181,17 +178,18 @@ body{
     padding: 3%;
     font-size:20px;
     height: 40%;
-    /* max-width: 40%; */
     min-width: 40%;
-    margin: 0 0 0 20px;
-    transform:skewX(-20deg);
-    border-radius:50px 0px 50px 5px;
+    margin: 0 10px 0 20px;
+    border-radius: 0;
+    flex-wrap: wrap;
     right: 0;
     transition: 1s;
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior:smooth;
     box-shadow: 1px 2px 5px rgb(0, 0, 0),1px -2px 5px rgb(0, 0, 0);
+
+    
 
 }
 
@@ -200,15 +198,17 @@ body{
     top: 0;
    
 }
-.Projects table {
+
+.cen.active ~ .Projects table {
     /* border: 1px solid grey;  */
+    /* flex:3 5 0%; */
    width: 95%;
 }
 .cen.active ~ .Projects table td{
     font-size: 90%;
     line-height: 50px;
-
     text-wrap:nowrap;
+   
     
 }
 /* .cen.active ~ .Projects ul li:nth-child(2){
@@ -252,19 +252,19 @@ body{
 .cen.active ~ .Skill{ 
     /* background-color: white; */
     padding: 20px;
-    margin: 10px;
+    margin:0 10px 0 10px;
     font-size: medium;
     bottom: 0;
-    border-radius: 40px 0 0 0;
-    height: 25%;
-    width: 100%;
+    border-radius: 0;
+    height: 27%;
+    width: 98%;
     transition: 1s;
     color: azure;
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
     box-shadow: 1px -1px 3px rgb(252, 147, 0);
-    transform:skewX(-20deg);
+    /* transform:skewX(-20deg); */
     /* overflow: scroll; */
     word-spacing: 3px;
     line-height: 23px;
@@ -294,7 +294,16 @@ body{
 }
 .Summary p{
     font-size: 0%;
+   
 
+}
+.Summary h3{
+    display: flex;
+    justify-content: center;
+    /* position: sticky; */
+    /* flex-wrap:; */
+    top: 0;
+    
 }
 .cen.active ~ .Summary p{
     font-size: medium;
@@ -304,19 +313,20 @@ body{
 
 }
 .cen.active ~ .Summary{ 
-    /* margin: 10px; */
+    margin:0 10px 0 10px;
     /* background-color: rgb(0, 0, 0); */
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     font-size: medium;
     transition: 300ms;
-    width: 99%;
-    height: 28%;
+    width: 98%;
+    height: 27%;
     border-radius:0 ;
     top: 0;
     overflow: scroll;
     scrollbar-width: none;
-    scroll-behavior: smooth;
-    border-radius:10px 10px 20px 23px;
-    transform:skewX(-20deg);
+     
+    /* border-radius:10px 10px 20px 23px; */
+    /* transform:skewX(-20deg); */
+    
 
 }
