@@ -222,27 +222,48 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="grid">
-        <div class="card tilt glow slide-up">
-          <p>📧 <a href="mailto:prasadpmanikandan@gmail.com">prasadpmanikandan@gmail.com</a></p>
-          <p>📞 +91 97903 24050</p>
-          <p>🔗 <a href="https://www.linkedin.com/in/manikandan-p-a7b635221/" target="_blank">LinkedIn</a> · <a href="https://github.com/manikanda98" target="_blank">GitHub</a></p>
-        </div>
-        <div class="card tilt glow slide-up">
-          <form onsubmit="event.preventDefault();alert('Thanks — I will respond shortly.')">
-            <input type="text" placeholder="Your name" required style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
-            <input type="email" placeholder="Your email" required style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
-            <textarea rows="5" placeholder="Message" style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd"></textarea>
-            <button class="btn primary-btn" style="padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;border:0">Send Message</button>
-          </form>
-        </div>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="grid">
+      
+      <!-- Contact Info -->
+      <div class="card tilt glow slide-up">
+        <p>📧 <a href="mailto:prasadpmanikandan@gmail.com">prasadpmanikandan@gmail.com</a></p>
+        <p>📞 +91 97903 24050</p>
+        <p>🔗 
+          <a href="https://www.linkedin.com/in/manikandan-p-a7b635221/" target="_blank">LinkedIn</a> · 
+          <a href="https://github.com/manikanda98" target="_blank">GitHub</a>
+        </p>
       </div>
+
+      <!-- Functional Netlify Form -->
+      <div class="card tilt glow slide-up">
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="subject" value="New Portfolio Contact Message" />
+
+          <input type="text" name="name" placeholder="Your name" required
+            style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
+
+          <input type="email" name="email" placeholder="Your email" required
+            style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd">
+
+          <textarea name="message" rows="5" placeholder="Message" required
+            style="width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #ddd"></textarea>
+
+          <button type="submit" class="btn primary-btn"
+            style="padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;border:0">
+            Send Message
+          </button>
+        </form>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer style="padding:18px 0;text-align:center;color:var(--muted)">© 2025 Manikandan • ML Engineer & Backend Developer</footer>
 
